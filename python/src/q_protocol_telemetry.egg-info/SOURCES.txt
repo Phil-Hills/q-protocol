@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+src/q_protocol_telemetry/__init__.py
+src/q_protocol_telemetry/swarm_registry.py
+src/q_protocol_telemetry.egg-info/PKG-INFO
+src/q_protocol_telemetry.egg-info/SOURCES.txt
+src/q_protocol_telemetry.egg-info/dependency_links.txt
+src/q_protocol_telemetry.egg-info/requires.txt
+src/q_protocol_telemetry.egg-info/top_level.txt

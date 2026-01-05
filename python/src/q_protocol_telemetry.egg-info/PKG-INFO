@@ -1,0 +1,67 @@
+Metadata-Version: 2.4
+Name: q-protocol-telemetry
+Version: 0.1.0
+Summary: A lightweight telemetry and registry protocol for autonomous agent swarms.
+Home-page: https://github.com/Phil-Hills/q-protocol-telemetry
+Author: Phil Hills (Systems Architect)
+Author-email: phil@philhills.ai
+Project-URL: Bug Tracker, https://github.com/Phil-Hills/q-protocol-telemetry/issues
+Project-URL: Documentation, https://philhills.ai/docs/q-protocol
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: typing-extensions>=4.0.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Q-Protocol Telemetry
+
+**A lightweight telemetry and registry protocol for autonomous agent swarms.**
+
+## Overview
+
+The Q-Protocol Telemetry library (`q-protocol-telemetry`) provides a standardized interface for registering autonomous agents and emitting structured telemetry events. It is designed to facilitate the "Q Protocol" standard for inter-agent communication and observability.
+
+## Features
+
+- **Agent Registry**: Centralized (in-memory) or distributed tracking of active agents.
+- **Telemetry Emitters**: Standardized event logging for agent state transitions (e.g., `START`, `COMPLETED`, `FAILED`).
+- **Signature Verification**: (Placeholder) Mechanisms for verifying agent identity.
+
+## Installation
+
+```bash
+pip install q-protocol-telemetry
+```
+
+## Usage
+
+```python
+from q_protocol_telemetry import SwarmRegistry
+
+registry = SwarmRegistry()
+registry.register_agent("agent-alpha", "v1.0.2")
+
+# Emit a heartbeat
+registry.emit_telemetry("agent-alpha", "HEARTBEAT", {"load": 0.45})
+```
+
+## License
+
+MIT

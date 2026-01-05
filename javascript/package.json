@@ -1,0 +1,27 @@
+{
+    "name": "q-protocol-telemetry-js",
+    "version": "1.0.0",
+    "description": "Z-Order Spatial Compression standard for Agentic Telemetry.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Phil-Hills/q-protocol.git"
+    },
+    "keywords": [
+        "telemetry",
+        "agents",
+        "z-order",
+        "morton-code",
+        "spatial-hashing",
+        "ai-orchestration"
+    ],
+    "author": "Phil Hills <contact@philhills.com> (https://philhills.ai)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Phil-Hills/q-protocol/issues"
+    },
+    "homepage": "https://philhills.ai"
+}
