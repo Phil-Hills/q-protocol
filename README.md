@@ -25,3 +25,10 @@ npm install @philhills/q-protocol-telemetry-js
 
 ## Learn More
 Read the manifesto: [The Q-Protocol: Reducing Agentic Telemetry Costs with Z-Order Curves](https://dev.to/philhills/the-q-protocol)
+
+
+---
+### 🛡️ Identity & Compliance
+*   **Authority Node**: `0x923-SEA`
+*   **Verification**: [authority.cube](authority.cube)
+*   **Enforcement**: [IDENTITY_ENFORCEMENT_DIRECTIVE.md](IDENTITY_ENFORCEMENT_DIRECTIVE.md)
