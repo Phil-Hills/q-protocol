@@ -1,0 +1,63 @@
+syntax = "proto3";
+package a2ac.protocol;
+
+import "latent_space.proto";
+
+// The Identity Cube: A structured, dense representation of cognitive awareness
+// This is the atomic unit of agent state in the Q Protocol mesh architecture.
+message IdentityCube {
+  // Unique Agent Identifier (UUID)
+  string agent_id = 1;
+  
+  // The session context within the swarm
+  string session_id = 2;
+  
+  // High-dimensional vector representing current intent
+  // Salesforce Note: Mapped to 'List<Double>' in Apex via Agentforce
+  repeated float intent_vector = 3 [packed=true];
+  
+  // Z-Order Curve Coordinate for efficient spatial indexing
+  int64 z_order_index = 4;
+
+  // Metadata for Mesh Orchestration latency tracking
+  map<string, string> mesh_metadata = 5;
+  
+  // Cryptographic signature to prevent "ForcedLeak" injection
+  string integrity_hash = 6;
+}
+
+// A2AC Receipt - Proof of completed execution ("Silence is Success")
+message AgentReceipt {
+  // Unique receipt identifier (e.g., "RCPT-c8f1a2b7cc70")
+  string receipt_id = 1;
+  
+  // The hex coordinate of the completed action
+  string coordinate = 2;
+  
+  // Whether the action succeeded
+  bool success = 3;
+  
+  // ISO8601 timestamp
+  string timestamp = 4;
+  
+  // SHA-256 truncated signature for verification
+  string signature = 5;
+}
+
+// Hex Coordinate - The minimal address format
+message HexCoordinate {
+  // Base address (always "0x600")
+  string base_address = 1;
+  
+  // Space code: 01=INTENT, 02=ACTION, 03=STATE, 04=RECEIPT, FF=ERROR
+  string space_code = 2;
+  
+  // Entity code (4 chars): CASE, LEAD, ACCT, KNOW, etc.
+  string entity_code = 3;
+  
+  // Action code (4 chars): READ, CREA, UPDT, DELE, RSLV, etc.
+  string action_code = 4;
+  
+  // State hash (8 chars) for verification
+  string state_hash = 5;
+}

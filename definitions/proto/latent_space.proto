@@ -1,0 +1,29 @@
+syntax = "proto3";
+package a2ac.protocol;
+
+// Vector Space Configuration
+// Defines the dimensions of the latent space to ensure GCP and Salesforce
+// use the same "map" for intent alignment.
+message VectorSpaceConfig {
+  // Embedding model version (e.g., "text-embedding-3-large")
+  string model_version = 1;
+  
+  // Vector dimensions (e.g., 1536 or 3072)
+  int32 dimensions = 2;
+  
+  // Distance metric: "COSINE" or "DOT_PRODUCT"
+  string distance_metric = 3;
+}
+
+// Latent Space Coordinate
+// Represents a position in the semantic vector space
+message LatentCoordinate {
+  // The raw embedding vector
+  repeated float vector = 1 [packed=true];
+  
+  // Which model generated this vector
+  string model_id = 2;
+  
+  // Normalized distance from origin (0.0 - 1.0)
+  float magnitude = 3;
+}
