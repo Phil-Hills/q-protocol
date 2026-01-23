@@ -3,9 +3,9 @@ package a2ac.protocol;
 
 import "latent_space.proto";
 
-// The Identity Cube: A structured, dense representation of cognitive awareness
+// The Agent Voxel: A structured, dense representation of cognitive awareness
 // This is the atomic unit of agent state in the Q Protocol mesh architecture.
-message IdentityCube {
+message AgentVoxel {
   // Unique Agent Identifier (UUID)
   string agent_id = 1;
   

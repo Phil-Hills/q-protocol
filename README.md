@@ -12,7 +12,7 @@
 
 ---
 
-[Specification](#specification) · [Identity Cube](#identity-cube) · [Coordinate System](#coordinate-system) · [Receipts](#receipts) · [Implementations](#implementations)
+[Specification](#specification) · [Agent Voxel](#agent-voxel) · [Coordinate System](#coordinate-system) · [Receipts](#receipts) · [Implementations](#implementations)
 
 </div>
 
@@ -106,7 +106,7 @@ All Q Protocol messages begin with `0x600` — the protocol identifier.
 | `KNOW` | Knowledge Article | Salesforce/Data Cloud |
 | `FLOW` | Automation Flow | Salesforce |
 | `MODL` | AI Model | GCP Vertex AI |
-| `CUBE` | Identity Cube | Q Protocol |
+| `VOXEL` | Agent Voxel | Q Protocol |
 
 ### Action Codes
 
@@ -123,9 +123,9 @@ All Q Protocol messages begin with `0x600` — the protocol identifier.
 
 ---
 
-## Identity Cube
+## Agent Voxel
 
-The **Identity Cube** is a compressed cognitive profile — the atomic unit of agent state.
+The **Agent Voxel** is a compressed cognitive profile — the atomic unit of agent state.
 
 ### Structure (Protobuf)
 
@@ -133,8 +133,8 @@ The **Identity Cube** is a compressed cognitive profile — the atomic unit of a
 syntax = "proto3";
 package q.protocol;
 
-// The Identity Cube: A compressed cognitive profile
-message IdentityCube {
+// The Agent Voxel: A compressed cognitive profile
+message AgentVoxel {
   string agent_id = 1;
   string session_id = 2;
   
@@ -248,10 +248,10 @@ A2ACProtocol.AgentReceipt receipt = A2ACProtocol.issueReceipt(coord, true);
 ### Python (GCP)
 
 ```python
-from q_protocol import IdentityCube, Receipt
+from q_protocol import AgentVoxel, Receipt
 
 # Create a cube
-cube = IdentityCube(
+voxel = AgentVoxel(
     agent_id="gcp_analyzer",
     intent_vector=[0.123, 0.456, ...]
 )
